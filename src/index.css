@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.stroke-text{
+    color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.plans-grid{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom right, rgb(168 162 158), rgb(41 37 36));
+    color: white;
+    padding: 1.5rem;
+    width: 20rem;
+    height: 30rem;
+    justify-content: space-around;
+}
+.plans-grid:nth-child(2){
+    background-image: linear-gradient(to bottom right, rgb(74 222 128), rgb(22 101 52));
+    transform: scale(1.1)
+}
+
+.plans-grid:nth-child(2)>button{
+    color: green;
+    background-color: white;
+}
+
+
+.exercise-card {
+    width: 400px;
+    height: 445px;
+    background: #fff;
+    border-top: 4px solid #FF2625;
+    border-bottom-left-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 10px;
+    transform: scale(1, 1);
+    transition: 0.3s all ease-in-out;
+}
+
+.exercise-video {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 387px;
+    height: 350px;
+    text-decoration: none;    
+}
+
+.right-arrow,
+.left-arrow {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF2625;
+  font-size: 25px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: -20px;
+  right: 80px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.right-arrow {
+  right: 140px;
+}
+
+.right-arrow:hover,
+.left-arrow:hover {
+  transform: scale(1.3, 1.3);
+}
+
+@media screen and (max-width: 768px) {
+    
+    .plans-grid:nth-child(2){
+        transform: scale(1);
+    }
+
+    .exercise-card{
+        width: 300px;
+        height: 350px;
+        margin: 8px 0;
+    }
+    
+    .left-arrow,
+    .right-arrow {
+    position: static !important;
+    }
+}
