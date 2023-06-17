@@ -8,9 +8,17 @@ const Footer = () => {
         <hr className='border-2 border-solid border-gray-300'/>
         <div className='py-4 px-8 flex flex-col gap-16 justify-center items-center z-10'>
             <div className='flex gap-16'>
-                <img src={Github} alt="" className='cursor-pointer w-8 h-8'/>
-                <img src={LinkedIn} alt="" className='cursor-pointer w-8 h-8' />
-                <img src={MyLogo} alt="" className='cursor-pointer w-8 h-8' />
+                <img src={Github} alt="" 
+                onClick = { () => window.open('https://github.com/Itsharshhd?tab=repositories', "_blank")}
+                className='cursor-pointer w-8 h-8'
+                />
+                <img src={LinkedIn} alt="" 
+                onClick = { () =>  window.open('https://www.linkedin.com/feed/', "_blank") } 
+                className='cursor-pointer w-8 h-8' 
+                />
+                <img src={MyLogo} alt=""
+                onClick = { () => window.open('https://itsharshdubey.netlify.app', "_blank")} 
+                className='cursor-pointer w-8 h-8' />
             </div>
         </div>
         <div className='flex gap-16 items-center justify-center my-4 z-10' >

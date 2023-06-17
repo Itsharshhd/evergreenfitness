@@ -25,7 +25,7 @@
     transform: scale(1.1)
 }
 
-.plans-grid:nth-child(2)>button{
+.plans-grid:nth-child(2)>a{
     color: green;
     background-color: white;
 }

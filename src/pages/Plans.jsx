@@ -1,6 +1,7 @@
 import React from 'react'
 import { plansData } from '../constants'
 import { WhiteTick } from '../assets';
+import { Link } from 'react-router-dom';
 
 const Plans = () => {
 	return (
@@ -40,10 +41,11 @@ const Plans = () => {
 								<span className='text-xl underline'>See more benefits...</span>
 							</div>
 							
-							<button
-							onClick={()=> window.location.href="/join"}
-							className='bg-green-400 p-2 w-40 font-bold rounded-lg text-black self-center'
-							>Join Now</button>
+							<Link to="/join"
+							className='bg-green-400 p-2 w-32 font-bold rounded-lg text-black text-center self-center'
+							>
+								<button>Join Now</button>
+							</Link>
 						</div>
 					))
 				}
